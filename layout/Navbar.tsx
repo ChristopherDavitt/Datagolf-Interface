@@ -1,13 +1,13 @@
-import { Box, Divider, Flex, Icon } from "@chakra-ui/react";
+import { Box, createIcon, Divider, Flex, Icon } from "@chakra-ui/react";
 import { StaticImageData } from "next/image";
 import Link from 'next/link';
+import DGLogo from '../public/dg_logo.svg';
 import { FaLinkedin, FaFacebook, FaDiscord, FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa';
 import { IconType } from "react-icons/lib/esm/iconBase";
 import { APP_NAME, MAX_WIDTH } from '../theme/constants';
 import { SVGComponent } from "../types/SVGComponent";
 import withStyle from '../utils/withStyle';
 import Image from "next/image";
-import SearchBar from "../components/SearchBar";
 import React from "react";
 
 const socialIcons: SocialIcons = {
@@ -104,6 +104,10 @@ const ImageWrapper = withStyle('div', {
   height: '100%',
   width: 'auto',
   position: 'relative',
+});
+
+const DGIcon = createIcon({
+  path: <DGLogo />
 })
 
 const Navbar = (props: NavItems) => {
@@ -124,7 +128,6 @@ const Navbar = (props: NavItems) => {
               <NavLink key={link.title} link={link.link} title={link.title} />
             </>
           ) )}
-          <SearchBar />
         </ItemsFlex>
         <ItemsFlex flex={0}>
           {props.socials?.map((soc) => (

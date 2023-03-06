@@ -12,44 +12,36 @@ const links = [
     link: '/',
   },
   {
-    title: 'Blog',
-    link: '/blog',
+    title: 'Bet Tracker',
+    link: '/bet-tracker',
   },
   {
-    title: 'About Me',
-    link: '/authors',
-  },
-  {
-    title: 'Categories',
-    link: '/categories',
+    title: 'Account Settings',
+    link: '/account-settings',
   },
 ];
 
 const socials: SocialLinks[] = [
   {
     social:  'discord',
-    link: 'https://google.com',
+    link: 'https://discordapp.com/channels/995687014550741022/1077259906689798174',
   },
-  {
-    social:  'twitter',
-    link: 'https://google.com',
-  },
-  {
-    social:  'instagram',
-    link: 'https://google.com',
-  },
-  {
-    social:  'facebook',
-    link: 'https://google.com',
-  },
-  {
-    social:  'linkedIn',
-    link: 'https://google.com',
-  },
-  {
-    social:  'github',
-    link: 'https://google.com',
-  },
+  // {
+  //   social:  'instagram',
+  //   link: 'https://google.com',
+  // },
+  // {
+  //   social:  'facebook',
+  //   link: 'https://google.com',
+  // },
+  // {
+  //   social:  'linkedIn',
+  //   link: 'https://google.com',
+  // },
+  // {
+  //   social:  'github',
+  //   link: 'https://google.com',
+  // },
 ]
 
 const Layout: React.ComponentType<LayoutProps> = ({ children }) => {
