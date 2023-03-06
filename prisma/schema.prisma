@@ -1,0 +1,24 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model bets {
+  id              Int           @id @default(autoincrement())
+  title           String?
+  event           String? 
+  type            String?       
+  sportsbook      String?
+  odds            Int
+  dg_odds         Int
+  expected_value  Int        
+  ammount_staked  Int
+  created_at      DateTime      @default(now())
+  updated_at      DateTime      @updatedAt
+  result          String?
+  custom_payout   Int?
+}
