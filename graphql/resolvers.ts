@@ -9,7 +9,7 @@ export const resolvers = {
     bets: async () => prisma.bets.findMany(),
   },
   Mutation: {
-    postBet: async (_, { input } : { input: BetInput }) => {
+    postBet: async (_: any, { input } : { input: BetInput }) => {
       const ev = calcEV(input.dg_odds, input.odds);
 
       if (!ev) {
@@ -43,7 +43,7 @@ export const resolvers = {
         })
       };
     },
-    postResult: async (_, { input }: { input: ResultInput }) => {
+    postResult: async (_: any, { input }: { input: ResultInput }) => {
       const exists = await prisma.bets.findUnique({
         where: {
           id: input.id,
